@@ -1,0 +1,15 @@
+{
+  "name"         : "HypeMGrabber",
+  "version"      : "0.0.1",
+  "description"  : "Hype Machine Track Downloader",
+  "main"         : "server.js",
+  "author"       : "jhelmink",
+  "license"		 : "MIT",
+  "repository" 	 : "http://github.com/jehlmink/HypeMGrabber",
+  "dependencies" : {
+    "express"    : "latest",
+    "request"    : "latest",
+    "cheerio"    : "latest",
+	"async"	 	 : "latest"
+  }
+}

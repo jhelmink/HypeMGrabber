@@ -1,0 +1,368 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Users\\Win7-Dev\\Documents\\GitHub\\HypeMGrabber\\node.exe',
+1 verbose cli   'C:\\Users\\Win7-Dev\\Documents\\GitHub\\HypeMGrabber\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.6
+4 verbose readDependencies loading dependencies from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\package.json
+5 warn package.json HypeMGrabber@0.0.1 No README data
+6 verbose install where, deps [ 'C:\\Users\\Win7-Dev\\Documents\\GitHub\\HypeMGrabber',
+6 verbose install   [ 'express', 'request', 'cheerio', 'async', 'child_process' ] ]
+7 verbose install where, peers [ 'C:\\Users\\Win7-Dev\\Documents\\GitHub\\HypeMGrabber', [] ]
+8 verbose installManyTop reading for lifecycle C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\package.json
+9 info preinstall HypeMGrabber@0.0.1
+10 verbose installManyTop reading scoped package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\async\package.json
+11 verbose installManyTop reading scoped package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\cheerio\package.json
+12 verbose installManyTop reading scoped package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\express\package.json
+13 verbose installManyTop reading scoped package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\npm\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\request\package.json
+15 info package.json npm@2.14.12 Non-dependency in bundleDependencies: ansi-regex
+16 info package.json npm@2.14.12 Non-dependency in bundleDependencies: spdx-license-ids
+17 info package.json npm@2.14.12 Non-dependency in bundleDependencies: strip-ansi
+18 verbose readDependencies loading dependencies from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\package.json
+19 verbose targetResolver reading package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\async\package.json
+20 verbose targetResolver reading package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\cheerio\package.json
+21 verbose targetResolver reading package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\express\package.json
+22 verbose targetResolver reading package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\npm\package.json
+23 verbose targetResolver reading package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\request\package.json
+24 verbose targetResolver reading package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\.bin\npm\package.json
+25 verbose targetResolver reading package data from C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\.bin\npm.cmd\package.json
+26 silly cache add args [ 'express@latest', null ]
+27 verbose cache add spec express@latest
+28 silly cache add args [ 'request@latest', null ]
+29 verbose cache add spec request@latest
+30 silly cache add parsed spec Result {
+30 silly cache add   raw: 'express@latest',
+30 silly cache add   scope: null,
+30 silly cache add   name: 'express',
+30 silly cache add   rawSpec: 'latest',
+30 silly cache add   spec: 'latest',
+30 silly cache add   type: 'tag' }
+31 silly addNamed express@latest
+32 verbose addNamed "latest" is being treated as a dist-tag for express
+33 info addNameTag [ 'express', 'latest' ]
+34 silly mapToRegistry name express
+35 silly mapToRegistry using default registry
+36 silly mapToRegistry registry https://registry.npmjs.org/
+37 silly mapToRegistry uri https://registry.npmjs.org/express
+38 verbose addNameTag registry:https://registry.npmjs.org/express not in flight; fetching
+39 silly cache add args [ 'cheerio@latest', null ]
+40 verbose cache add spec cheerio@latest
+41 silly cache add args [ 'async@latest', null ]
+42 verbose cache add spec async@latest
+43 silly cache add args [ 'child_process@latest', null ]
+44 verbose cache add spec child_process@latest
+45 silly cache add parsed spec Result {
+45 silly cache add   raw: 'request@latest',
+45 silly cache add   scope: null,
+45 silly cache add   name: 'request',
+45 silly cache add   rawSpec: 'latest',
+45 silly cache add   spec: 'latest',
+45 silly cache add   type: 'tag' }
+46 silly addNamed request@latest
+47 verbose addNamed "latest" is being treated as a dist-tag for request
+48 info addNameTag [ 'request', 'latest' ]
+49 silly mapToRegistry name request
+50 silly mapToRegistry using default registry
+51 silly mapToRegistry registry https://registry.npmjs.org/
+52 silly mapToRegistry uri https://registry.npmjs.org/request
+53 verbose addNameTag registry:https://registry.npmjs.org/request not in flight; fetching
+54 silly cache add parsed spec Result {
+54 silly cache add   raw: 'cheerio@latest',
+54 silly cache add   scope: null,
+54 silly cache add   name: 'cheerio',
+54 silly cache add   rawSpec: 'latest',
+54 silly cache add   spec: 'latest',
+54 silly cache add   type: 'tag' }
+55 silly addNamed cheerio@latest
+56 verbose addNamed "latest" is being treated as a dist-tag for cheerio
+57 info addNameTag [ 'cheerio', 'latest' ]
+58 silly mapToRegistry name cheerio
+59 silly mapToRegistry using default registry
+60 silly mapToRegistry registry https://registry.npmjs.org/
+61 silly mapToRegistry uri https://registry.npmjs.org/cheerio
+62 verbose addNameTag registry:https://registry.npmjs.org/cheerio not in flight; fetching
+63 silly cache add parsed spec Result {
+63 silly cache add   raw: 'async@latest',
+63 silly cache add   scope: null,
+63 silly cache add   name: 'async',
+63 silly cache add   rawSpec: 'latest',
+63 silly cache add   spec: 'latest',
+63 silly cache add   type: 'tag' }
+64 silly addNamed async@latest
+65 verbose addNamed "latest" is being treated as a dist-tag for async
+66 info addNameTag [ 'async', 'latest' ]
+67 silly mapToRegistry name async
+68 silly mapToRegistry using default registry
+69 silly mapToRegistry registry https://registry.npmjs.org/
+70 silly mapToRegistry uri https://registry.npmjs.org/async
+71 verbose addNameTag registry:https://registry.npmjs.org/async not in flight; fetching
+72 silly cache add parsed spec Result {
+72 silly cache add   raw: 'child_process@latest',
+72 silly cache add   scope: null,
+72 silly cache add   name: 'child_process',
+72 silly cache add   rawSpec: 'latest',
+72 silly cache add   spec: 'latest',
+72 silly cache add   type: 'tag' }
+73 silly addNamed child_process@latest
+74 verbose addNamed "latest" is being treated as a dist-tag for child_process
+75 info addNameTag [ 'child_process', 'latest' ]
+76 silly mapToRegistry name child_process
+77 silly mapToRegistry using default registry
+78 silly mapToRegistry registry https://registry.npmjs.org/
+79 silly mapToRegistry uri https://registry.npmjs.org/child_process
+80 verbose addNameTag registry:https://registry.npmjs.org/child_process not in flight; fetching
+81 verbose request uri https://registry.npmjs.org/child_process
+82 verbose request no auth needed
+83 info attempt registry request try #1 at 9:35:03 AM
+84 verbose request id 21acea8baf64e189
+85 http request GET https://registry.npmjs.org/child_process
+86 verbose request uri https://registry.npmjs.org/request
+87 verbose request no auth needed
+88 info attempt registry request try #1 at 9:35:03 AM
+89 verbose etag "BH8Y99GQTUJPUQISPGIGTHFQZ"
+90 http request GET https://registry.npmjs.org/request
+91 verbose request uri https://registry.npmjs.org/cheerio
+92 verbose request no auth needed
+93 info attempt registry request try #1 at 9:35:03 AM
+94 verbose etag "DI5VSVJOT2JZ3WK06PH09G67C"
+95 http request GET https://registry.npmjs.org/cheerio
+96 verbose request uri https://registry.npmjs.org/async
+97 verbose request no auth needed
+98 info attempt registry request try #1 at 9:35:03 AM
+99 verbose etag "6KPQKK66RDIN5FP1PX4K4EW1K"
+100 http request GET https://registry.npmjs.org/async
+101 verbose request uri https://registry.npmjs.org/express
+102 verbose request no auth needed
+103 info attempt registry request try #1 at 9:35:03 AM
+104 verbose etag "EYUK55TQ4PO64B06A3TCLVE9G"
+105 http request GET https://registry.npmjs.org/express
+106 http 200 https://registry.npmjs.org/async
+107 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+107 verbose headers   etag: '"ECTBCTMNA84HV6V75JQBO89A8"',
+107 verbose headers   'content-type': 'application/json',
+107 verbose headers   'cache-control': 'max-age=300',
+107 verbose headers   'content-length': '140345',
+107 verbose headers   'accept-ranges': 'bytes',
+107 verbose headers   date: 'Wed, 27 Jan 2016 20:35:09 GMT',
+107 verbose headers   via: '1.1 varnish',
+107 verbose headers   age: '151',
+107 verbose headers   connection: 'keep-alive',
+107 verbose headers   'x-served-by': 'cache-akl6420-AKL',
+107 verbose headers   'x-cache': 'HIT',
+107 verbose headers   'x-cache-hits': '3',
+107 verbose headers   'x-timer': 'S1453926909.344334,VS0,VE0',
+107 verbose headers   vary: 'Accept' }
+108 silly get cb [ 200,
+108 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+108 silly get     etag: '"ECTBCTMNA84HV6V75JQBO89A8"',
+108 silly get     'content-type': 'application/json',
+108 silly get     'cache-control': 'max-age=300',
+108 silly get     'content-length': '140345',
+108 silly get     'accept-ranges': 'bytes',
+108 silly get     date: 'Wed, 27 Jan 2016 20:35:09 GMT',
+108 silly get     via: '1.1 varnish',
+108 silly get     age: '151',
+108 silly get     connection: 'keep-alive',
+108 silly get     'x-served-by': 'cache-akl6420-AKL',
+108 silly get     'x-cache': 'HIT',
+108 silly get     'x-cache-hits': '3',
+108 silly get     'x-timer': 'S1453926909.344334,VS0,VE0',
+108 silly get     vary: 'Accept' } ]
+109 verbose get saving async to C:\Users\Win7-Dev\AppData\Roaming\npm-cache\registry.npmjs.org\async\.cache.json
+110 silly addNameTag next cb for async with tag latest
+111 silly addNamed async@1.5.2
+112 verbose addNamed "1.5.2" is a plain semver version for async
+113 silly cache afterAdd async@1.5.2
+114 verbose afterAdd C:\Users\Win7-Dev\AppData\Roaming\npm-cache\async\1.5.2\package\package.json not in flight; writing
+115 verbose afterAdd C:\Users\Win7-Dev\AppData\Roaming\npm-cache\async\1.5.2\package\package.json written
+116 info already installed async@1.5.2
+117 http 404 https://registry.npmjs.org/child_process
+118 verbose headers { 'content-type': 'application/json',
+118 verbose headers   'cache-control': 'max-age=0',
+118 verbose headers   'content-length': '2',
+118 verbose headers   'accept-ranges': 'bytes',
+118 verbose headers   date: 'Wed, 27 Jan 2016 20:35:10 GMT',
+118 verbose headers   via: '1.1 varnish',
+118 verbose headers   age: '0',
+118 verbose headers   connection: 'keep-alive',
+118 verbose headers   'x-served-by': 'cache-akl6420-AKL',
+118 verbose headers   'x-cache': 'MISS',
+118 verbose headers   'x-cache-hits': '0',
+118 verbose headers   'x-timer': 'S1453926909.348331,VS0,VE747' }
+119 silly get cb [ 404,
+119 silly get   { 'content-type': 'application/json',
+119 silly get     'cache-control': 'max-age=0',
+119 silly get     'content-length': '2',
+119 silly get     'accept-ranges': 'bytes',
+119 silly get     date: 'Wed, 27 Jan 2016 20:35:10 GMT',
+119 silly get     via: '1.1 varnish',
+119 silly get     age: '0',
+119 silly get     connection: 'keep-alive',
+119 silly get     'x-served-by': 'cache-akl6420-AKL',
+119 silly get     'x-cache': 'MISS',
+119 silly get     'x-cache-hits': '0',
+119 silly get     'x-timer': 'S1453926909.348331,VS0,VE747' } ]
+120 http 200 https://registry.npmjs.org/request
+121 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+121 verbose headers   etag: '"8IABD33ZJCC72TQ0VH4APG5U2"',
+121 verbose headers   'content-type': 'application/json',
+121 verbose headers   'cache-control': 'max-age=300',
+121 verbose headers   'content-length': '185953',
+121 verbose headers   'accept-ranges': 'bytes',
+121 verbose headers   date: 'Wed, 27 Jan 2016 20:35:10 GMT',
+121 verbose headers   via: '1.1 varnish',
+121 verbose headers   age: '0',
+121 verbose headers   connection: 'keep-alive',
+121 verbose headers   'x-served-by': 'cache-akl6420-AKL',
+121 verbose headers   'x-cache': 'HIT',
+121 verbose headers   'x-cache-hits': '1',
+121 verbose headers   'x-timer': 'S1453926909.345848,VS0,VE769',
+121 verbose headers   vary: 'Accept' }
+122 silly get cb [ 200,
+122 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+122 silly get     etag: '"8IABD33ZJCC72TQ0VH4APG5U2"',
+122 silly get     'content-type': 'application/json',
+122 silly get     'cache-control': 'max-age=300',
+122 silly get     'content-length': '185953',
+122 silly get     'accept-ranges': 'bytes',
+122 silly get     date: 'Wed, 27 Jan 2016 20:35:10 GMT',
+122 silly get     via: '1.1 varnish',
+122 silly get     age: '0',
+122 silly get     connection: 'keep-alive',
+122 silly get     'x-served-by': 'cache-akl6420-AKL',
+122 silly get     'x-cache': 'HIT',
+122 silly get     'x-cache-hits': '1',
+122 silly get     'x-timer': 'S1453926909.345848,VS0,VE769',
+122 silly get     vary: 'Accept' } ]
+123 verbose get saving request to C:\Users\Win7-Dev\AppData\Roaming\npm-cache\registry.npmjs.org\request\.cache.json
+124 silly addNameTag next cb for request with tag latest
+125 silly addNamed request@2.69.0
+126 verbose addNamed "2.69.0" is a plain semver version for request
+127 silly mapToRegistry name request
+128 silly mapToRegistry using default registry
+129 silly mapToRegistry registry https://registry.npmjs.org/
+130 silly mapToRegistry uri https://registry.npmjs.org/request
+131 verbose addRemoteTarball https://registry.npmjs.org/request/-/request-2.69.0.tgz not in flight; adding
+132 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.69.0.tgz',
+132 verbose addRemoteTarball   'cf91d2e000752b1217155c005241911991a2346a' ]
+133 info retry fetch attempt 1 at 9:35:04 AM
+134 info attempt registry request try #1 at 9:35:04 AM
+135 http fetch GET https://registry.npmjs.org/request/-/request-2.69.0.tgz
+136 http fetch 200 https://registry.npmjs.org/request/-/request-2.69.0.tgz
+137 silly fetchAndShaCheck shasum cf91d2e000752b1217155c005241911991a2346a
+138 verbose addTmpTarball C:\Users\Win7-Dev\AppData\Local\Temp\npm-3036-28a8f421\registry.npmjs.org\request\-\request-2.69.0.tgz not in flight; adding
+139 verbose addTmpTarball already have metadata; skipping unpack for request@2.69.0
+140 silly cache afterAdd request@2.69.0
+141 verbose afterAdd C:\Users\Win7-Dev\AppData\Roaming\npm-cache\request\2.69.0\package\package.json not in flight; writing
+142 verbose afterAdd C:\Users\Win7-Dev\AppData\Roaming\npm-cache\request\2.69.0\package\package.json written
+143 http 200 https://registry.npmjs.org/cheerio
+144 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+144 verbose headers   etag: '"4BHHEBJ4VOC0981KU3EGGCF31"',
+144 verbose headers   'content-type': 'application/json',
+144 verbose headers   'cache-control': 'max-age=300',
+144 verbose headers   'content-length': '92856',
+144 verbose headers   'accept-ranges': 'bytes',
+144 verbose headers   date: 'Wed, 27 Jan 2016 20:35:10 GMT',
+144 verbose headers   via: '1.1 varnish',
+144 verbose headers   age: '0',
+144 verbose headers   connection: 'keep-alive',
+144 verbose headers   'x-served-by': 'cache-akl6421-AKL',
+144 verbose headers   'x-cache': 'HIT',
+144 verbose headers   'x-cache-hits': '1',
+144 verbose headers   'x-timer': 'S1453926909.344724,VS0,VE908',
+144 verbose headers   vary: 'Accept' }
+145 silly get cb [ 200,
+145 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+145 silly get     etag: '"4BHHEBJ4VOC0981KU3EGGCF31"',
+145 silly get     'content-type': 'application/json',
+145 silly get     'cache-control': 'max-age=300',
+145 silly get     'content-length': '92856',
+145 silly get     'accept-ranges': 'bytes',
+145 silly get     date: 'Wed, 27 Jan 2016 20:35:10 GMT',
+145 silly get     via: '1.1 varnish',
+145 silly get     age: '0',
+145 silly get     connection: 'keep-alive',
+145 silly get     'x-served-by': 'cache-akl6421-AKL',
+145 silly get     'x-cache': 'HIT',
+145 silly get     'x-cache-hits': '1',
+145 silly get     'x-timer': 'S1453926909.344724,VS0,VE908',
+145 silly get     vary: 'Accept' } ]
+146 verbose get saving cheerio to C:\Users\Win7-Dev\AppData\Roaming\npm-cache\registry.npmjs.org\cheerio\.cache.json
+147 silly addNameTag next cb for cheerio with tag latest
+148 silly addNamed cheerio@0.19.0
+149 verbose addNamed "0.19.0" is a plain semver version for cheerio
+150 silly cache afterAdd cheerio@0.19.0
+151 verbose afterAdd C:\Users\Win7-Dev\AppData\Roaming\npm-cache\cheerio\0.19.0\package\package.json not in flight; writing
+152 verbose afterAdd C:\Users\Win7-Dev\AppData\Roaming\npm-cache\cheerio\0.19.0\package\package.json written
+153 info already installed cheerio@0.19.0
+154 http 200 https://registry.npmjs.org/express
+155 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+155 verbose headers   etag: '"AMKW3H0ZAJ9NCIRY0E2K2VU0V"',
+155 verbose headers   'content-type': 'application/json',
+155 verbose headers   'cache-control': 'max-age=300',
+155 verbose headers   'content-length': '533074',
+155 verbose headers   'accept-ranges': 'bytes',
+155 verbose headers   date: 'Wed, 27 Jan 2016 20:35:10 GMT',
+155 verbose headers   via: '1.1 varnish',
+155 verbose headers   age: '0',
+155 verbose headers   connection: 'keep-alive',
+155 verbose headers   'x-served-by': 'cache-akl6421-AKL',
+155 verbose headers   'x-cache': 'HIT',
+155 verbose headers   'x-cache-hits': '1',
+155 verbose headers   'x-timer': 'S1453926909.346253,VS0,VE925',
+155 verbose headers   vary: 'Accept' }
+156 silly get cb [ 200,
+156 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+156 silly get     etag: '"AMKW3H0ZAJ9NCIRY0E2K2VU0V"',
+156 silly get     'content-type': 'application/json',
+156 silly get     'cache-control': 'max-age=300',
+156 silly get     'content-length': '533074',
+156 silly get     'accept-ranges': 'bytes',
+156 silly get     date: 'Wed, 27 Jan 2016 20:35:10 GMT',
+156 silly get     via: '1.1 varnish',
+156 silly get     age: '0',
+156 silly get     connection: 'keep-alive',
+156 silly get     'x-served-by': 'cache-akl6421-AKL',
+156 silly get     'x-cache': 'HIT',
+156 silly get     'x-cache-hits': '1',
+156 silly get     'x-timer': 'S1453926909.346253,VS0,VE925',
+156 silly get     vary: 'Accept' } ]
+157 verbose get saving express to C:\Users\Win7-Dev\AppData\Roaming\npm-cache\registry.npmjs.org\express\.cache.json
+158 silly addNameTag next cb for express with tag latest
+159 silly addNamed express@4.13.4
+160 verbose addNamed "4.13.4" is a plain semver version for express
+161 silly cache afterAdd express@4.13.4
+162 verbose afterAdd C:\Users\Win7-Dev\AppData\Roaming\npm-cache\express\4.13.4\package\package.json not in flight; writing
+163 verbose afterAdd C:\Users\Win7-Dev\AppData\Roaming\npm-cache\express\4.13.4\package\package.json written
+164 info already installed express@4.13.4
+165 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/child_process
+165 verbose stack     at makeError (C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+165 verbose stack     at CachingRegistryClient.<anonymous> (C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\npm\node_modules\npm-registry-client\lib\request.js:242:14)
+165 verbose stack     at Request._callback (C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+165 verbose stack     at Request.self.callback (C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\npm\node_modules\request\request.js:198:22)
+165 verbose stack     at emitTwo (events.js:87:13)
+165 verbose stack     at Request.emit (events.js:172:7)
+165 verbose stack     at Request.<anonymous> (C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\npm\node_modules\request\request.js:1082:10)
+165 verbose stack     at emitOne (events.js:82:20)
+165 verbose stack     at Request.emit (events.js:169:7)
+165 verbose stack     at IncomingMessage.<anonymous> (C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber\node_modules\npm\node_modules\request\request.js:1009:12)
+166 verbose statusCode 404
+167 verbose pkgid child_process
+168 verbose cwd C:\Users\Win7-Dev\Documents\GitHub\HypeMGrabber
+169 error Windows_NT 6.1.7601
+170 error argv "C:\\Users\\Win7-Dev\\Documents\\GitHub\\HypeMGrabber\\node.exe" "C:\\Users\\Win7-Dev\\Documents\\GitHub\\HypeMGrabber\\node_modules\\npm\\bin\\npm-cli.js" "install"
+171 error node v4.2.6
+172 error npm  v2.14.12
+173 error code E404
+174 error 404 Registry returned 404 for GET on https://registry.npmjs.org/child_process
+174 error 404
+174 error 404 'child_process' is not in the npm registry.
+174 error 404 Your package name is not valid, because
+174 error 404
+174 error 404  1. child_process is a core module name
+174 error 404 It was specified as a dependency of 'HypeMGrabber'
+174 error 404
+174 error 404 Note that you can also install from a
+174 error 404 tarball, folder, http url, or git url.
+175 verbose exit [ 1, true ]
