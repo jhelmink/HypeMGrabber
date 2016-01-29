@@ -12,7 +12,7 @@ var app = express();
 // Globals
 var artist, title, remix, source_url, stream_url;
 var downloadDir = './downloads/';
-
+var fakeUserAgent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36';
 // Let's scrape a single track for testing
 var url = 'http://hypem.com/track/2f0fh';
 
@@ -39,62 +39,73 @@ app.get('/scrape', function (req, res) {
 
 function getMainPageData(url, callback) {
 	console.log('Get Main Page Data - url: ' + url);
-	request(url, function (error, response, html) {
-		if (!error) {
-			var $ = cheerio.load(html);
+	request({ 
+		url: url,
+			headers: {
+				'User-Agent': fakeUserAgent
+			}
+		},
+		function (error, response, html) {
+			if (!error) {
+				var $ = cheerio.load(html);
 
-			$('.artist').filter(function () {
-				var data = $(this);
-				artist = data.text();
-			})
+				$('.artist').filter(function () {
+					var data = $(this);
+					artist = data.text();
+				})
 
-			$('.base-title').filter(function () {
-				var data = $(this);
-				title = data.text();
-			})
+				$('.base-title').filter(function () {
+					var data = $(this);
+					title = data.text();
+				})
 
-			remix = ''; // If there is no remix
-			$('.remix-link').filter(function () {
-				var data = $(this);
-				remix = data.text();
-			})
+				remix = ''; // If there is no remix
+				$('.remix-link').filter(function () {
+					var data = $(this);
+					remix = data.text();
+				})
 
-			$('#displayList-data').filter(function () {
-				var data = $(this);
-				var scriptData = JSON.parse(data.text());
-				var id = scriptData.tracks[0].id;
-				var key = scriptData.tracks[0].key;
-				source_url = 'http://hypem.com/serve/source/' + id + '/' + key;
-				console.log('Source URL: ' + source_url);
-			})
+				$('#displayList-data').filter(function () {
+					var data = $(this);
+					var scriptData = JSON.parse(data.text());
+					var id = scriptData.tracks[0].id;
+					var key = scriptData.tracks[0].key;
+					source_url = 'http://hypem.com/serve/source/' + id + '/' + key;
+					console.log('Source URL: ' + source_url);
+				})
 
-			console.log('Track to process: ' + getFileName());
-			
-		} else {
-			console.log('Failed to request url: ' + url);
+				console.log('Track to process: ' + getFileName());
+				callback();
+			} else {
+				console.log('Failed to request url: ' + url);
+			}
 		}
-		
-		callback();
-	})
+	);
 }
 
 function getStreamData(source_url, callback) {
 	console.log('Get Stream Data - url:' + source_url);
-	request(source_url, function (error, response, jsonData) {	
-		if (!error) {
-			if(jsonData.indexOf('Error 403') > -1) {
-				console.log('We be blocked.');
-			} else {
-				var trackStreamData = JSON.parse(jsonData);
-				stream_url = trackStreamData.url;
-				console.log('Stream URL: ' + stream_url);
+	request({ 
+		url: source_url,
+			headers: {
+				'User-Agent': fakeUserAgent
 			}
-		} else {
-			console.log('Failed to request track json data from source url: ' + url);
+		},
+		function (error, response, jsonData) {	
+			if (!error) {
+				if(jsonData.indexOf('Error 403') > -1) {
+					console.log('We be blocked.');
+				} else {
+					var trackStreamData = JSON.parse(jsonData);
+					stream_url = trackStreamData.url;
+					console.log('Stream URL: ' + stream_url);
+					callback();
+				}
+			} else {
+				console.log('Failed to request track json data from source url: ' + url);
+			}
 		}
-		
-		callback();
-	})
+	);
 }
 
 // Use wget to do the download as it handles streams
@@ -105,14 +116,17 @@ function downloadFileWget (stream_url, callback) {
 	var wget = 'wget --output-document="' + downloadDir + fileName + '.mp3" ' + stream_url;
 	console.log(wget);
 	// Execute wget using child_process exec function
-	var child = exec(wget, function (err, stdout, stderr) {
-			if (err)
+	var child = exec(
+		wget, 
+		function (err, stdout, stderr) {
+			if (err) {
 				throw err;
-			else
+			} else {
 				console.log(fileName + ' downloaded to ' + downloadDir);
-		});
-	
-	callback();
+				callback();
+			}
+		}
+	);
 }
 
 function getFileName() {
