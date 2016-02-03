@@ -11,11 +11,6 @@ Running
 0. Visit [http://localhost:8081/scrape](http://localhost:8081/scrape) in a browser to trigger the scrape
 
 
-Known Issues
--------
-0. When getting the track stream json data we are getting blocked by hypem
-
-
 Future Development Plans
 -------
 

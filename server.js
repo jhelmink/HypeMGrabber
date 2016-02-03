@@ -1,20 +1,26 @@
 // 3rd Party dependencies
-var express = require('express');
-var request = require('request');
-var cheerio = require('cheerio');
-var async = require('async');
-// Core dependencies
+var express = require('express'); // http://expressjs.com/
+var request = require('request'); // https://github.com/request/request
+var cheerio = require('cheerio'); // https://github.com/cheeriojs/cheerio
+var async = require('async'); // https://github.com/caolan/async
+// Core Node dependencies
 var fs = require('fs');
 var exec = require('child_process').exec;
-
-var app = express();
 
 // Globals
 var artist, title, remix, source_url, stream_url;
 var downloadDir = './downloads/';
 var fakeUserAgent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36';
+
 // Let's scrape a single track for testing
 var url = 'http://hypem.com/track/2f0fh';
+
+var app = express();
+
+// Same cookie from getMainPageData request must be used for getStreamData request or it will be blocked
+var req = request.defaults({
+	jar: true	// save cookies to jar
+});
 
 // Scrape the page url for hypem tracks
 // https://scotch.io/tutorials/scraping-the-web-with-node-js
@@ -25,7 +31,7 @@ app.get('/scrape', function (req, res) {
 	// https://github.com/caolan/async#seriestasks-callback
 	// http://www.sebastianseilund.com/nodejs-async-in-practice
 	async.series([
-	    function(callback) { // First we get the Track details and stream source URL
+	    function(callback) { // First we get the Track details and stream source url
 			getMainPageData(url, callback);
 		},
 		function(callback) { // Now we get the track stream data from the source url
@@ -34,12 +40,14 @@ app.get('/scrape', function (req, res) {
 		function(callback) { // Finally download the file using wget for the stream
 			downloadFileWget (stream_url, callback);
 		},
-	]);
+	], function() { // Final function gets called after all others
+		res.send('Download Complete: ' + getFileName());
+	});
 });
 
 function getMainPageData(url, callback) {
 	console.log('Get Main Page Data - url: ' + url);
-	request({ 
+	req.get({ 
 		url: url,
 			headers: {
 				'User-Agent': fakeUserAgent
@@ -85,10 +93,11 @@ function getMainPageData(url, callback) {
 
 function getStreamData(source_url, callback) {
 	console.log('Get Stream Data - url:' + source_url);
-	request({ 
-		url: source_url,
+	req.get({ 
+			url: source_url,
 			headers: {
-				'User-Agent': fakeUserAgent
+				'User-Agent': fakeUserAgent,
+				'Content-Type': 'application/json'
 			}
 		},
 		function (error, response, jsonData) {	
